@@ -12,9 +12,8 @@ describe Wonga::Daemon::PantryAdDomainLeftEventHandler do
     }
   }
   let(:logger) { instance_double('Logger').as_null_object }
-  let(:api_client) { instance_double('ApiClient').as_null_object }
 
-  subject { Wonga::Daemon::PantryAdDomainLeftEventHandler.new(api_client, logger) }
+  subject { Wonga::Daemon::PantryAdDomainLeftEventHandler.new(config, logger) }
 
   it_behaves_like 'handler'
 end
