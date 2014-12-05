@@ -11,7 +11,6 @@ module Wonga
         message[:event] = :terminated
         message[:joined] = :false
         @api_client.send_put_request("/api/ec2_instances/#{message['id']}", message)
-        @logger.info "Updating domain left status for Request:#{message['id']} succeeded"
       end
     end
   end
